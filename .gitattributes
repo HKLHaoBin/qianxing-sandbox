@@ -1,0 +1,4 @@
+* text=auto
+
+memory-graph.md merge=union
+memory/lessons/*.md merge=union

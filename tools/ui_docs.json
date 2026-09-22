@@ -1,0 +1,180 @@
+{
+  "success": true,
+  "data": {
+    "skill": "miliastra-knowledge",
+    "tool": "list_documents",
+    "result": [
+      {
+        "keyword": "文本",
+        "total": 3,
+        "documents": [
+          {
+            "title": "多语言文本",
+            "file": "official/guide/mhk59aiqtwyk_多语言文本.md"
+          },
+          {
+            "title": "文本框界面控件",
+            "file": "official/guide/mhnltrr3g966_文本框界面控件.md"
+          },
+          {
+            "title": "文本气泡",
+            "file": "official/guide/mhwtz297kp6a_文本气泡.md"
+          }
+        ]
+      },
+      {
+        "keyword": "铭牌",
+        "total": 2,
+        "documents": [
+          {
+            "title": "铭牌",
+            "file": "official/guide/mh5n160t2b6w_铭牌.md"
+          },
+          {
+            "title": "3.11铭牌与气泡对话——场景界面中更丰富的信息展示样式",
+            "file": "official/tutorial/mh0mrr0c4xps_3.11铭牌与气泡对话——场景界面中更丰富的信息展示样式.md"
+          }
+        ]
+      },
+      {
+        "keyword": "界面",
+        "total": 23,
+        "documents": [
+          {
+            "title": "界面控件组编辑",
+            "file": "official/faq/mhuj5600xfhk_界面控件组编辑.md"
+          },
+          {
+            "title": "界面动效控件",
+            "file": "official/guide/mh2iyk9fa4gy_界面动效控件.md"
+          },
+          {
+            "title": "卡牌选择器界面控件",
+            "file": "official/guide/mh2teu0bmfbc_卡牌选择器界面控件.md"
+          },
+          {
+            "title": "全屏界面动效控件",
+            "file": "official/guide/mhbn4i09l5ns_全屏界面动效控件.md"
+          },
+          {
+            "title": "弹窗界面控件",
+            "file": "official/guide/mhen7r0djxkg_弹窗界面控件.md"
+          },
+          {
+            "title": "计分板界面控件",
+            "file": "official/guide/mhesro0hyn5k_计分板界面控件.md"
+          },
+          {
+            "title": "界面控件组管理",
+            "file": "official/guide/mhewyi0fjfvs_界面控件组管理.md"
+          },
+          {
+            "title": "界面控件组",
+            "file": "official/guide/mhg1700h8bug_界面控件组.md"
+          },
+          {
+            "title": "道具展示界面控件",
+            "file": "official/guide/mhjja1ipq9ck_道具展示界面控件.md"
+          },
+          {
+            "title": "整体界面",
+            "file": "official/guide/mhn4bsi5lb58_整体界面.md"
+          },
+          {
+            "title": "界面控件",
+            "file": "official/guide/mhnapxrumtzy_界面控件.md"
+          },
+          {
+            "title": "文本框界面控件",
+            "file": "official/guide/mhnltrr3g966_文本框界面控件.md"
+          },
+          {
+            "title": "计时器界面控件",
+            "file": "official/guide/mhnrdor7uyra_计时器界面控件.md"
+          },
+          {
+            "title": "界面布局",
+            "file": "official/guide/mhozt0r74ng6_界面布局.md"
+          },
+          {
+            "title": "交互按钮界面控件",
+            "file": "official/guide/mhwkfsitckrw_交互按钮界面控件.md"
+          },
+          {
+            "title": "进度条界面控件",
+            "file": "official/guide/mhwpzpixrad0_进度条界面控件.md"
+          },
+          {
+            "title": "界面介绍",
+            "file": "official/guide/mhz71urk21nq_界面介绍.md"
+          },
+          {
+            "title": "3.11铭牌与气泡对话——场景界面中更丰富的信息展示样式",
+            "file": "official/tutorial/mh0mrr0c4xps_3.11铭牌与气泡对话——场景界面中更丰富的信息展示样式.md"
+          },
+          {
+            "title": "界面控件——手柄适配引导",
+            "file": "official/tutorial/mhjobxrdykym_界面控件——手柄适配引导.md"
+          },
+          {
+            "title": "1.1编辑器界面基础认识",
+            "file": "official/tutorial/mhlcjxr9duvy_1.1编辑器界面基础认识.md"
+          },
+          {
+            "title": "玩法整合：界面控件",
+            "file": "official/tutorial/mhpdaf0v84vk_玩法整合：界面控件.md"
+          },
+          {
+            "title": "2.6界面控件——展示一段信息，按下触发事件",
+            "file": "official/tutorial/mhr6jorjp77a_2.6界面控件——展示一段信息，按下触发事件.md"
+          },
+          {
+            "title": "交互界面的搭建",
+            "file": "official/tutorial/mhxekxruo6ym_交互界面的搭建.md"
+          }
+        ]
+      },
+      {
+        "keyword": "HUD",
+        "total": 5,
+        "documents": [
+          {
+            "title": "结构体",
+            "file": "official/faq/mhudl90wipwg_结构体.md"
+          },
+          {
+            "title": "多人试玩",
+            "file": "official/guide/mh9fj3rudd9q_多人试玩.md"
+          },
+          {
+            "title": "查询节点",
+            "file": "official/guide/mhk4furvds12_查询节点.md"
+          },
+          {
+            "title": "模型",
+            "file": "official/guide/mhrutdio6904_模型.md"
+          },
+          {
+            "title": "额外碰撞",
+            "file": "official/guide/mhuiob9dg1dm_额外碰撞.md"
+          }
+        ]
+      },
+      {
+        "keyword": "文字",
+        "total": 2,
+        "documents": [
+          {
+            "title": "文字聊天",
+            "file": "official/guide/mhaneb9qnvay_文字聊天.md"
+          },
+          {
+            "title": "语音和文字聊天",
+            "file": "official/guide/mhaneb9qnvay_语音和文字聊天.md"
+          }
+        ]
+      }
+    ]
+  },
+  "error": null
+}

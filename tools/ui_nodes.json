@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "data": {
+    "skill": "miliastra-knowledge",
+    "tool": "get_node_info",
+    "result": [
+      {
+        "query": "设置铭牌",
+        "matches": [
+          {
+            "title": "1\\. 设置实体生效铭牌",
+            "main_title": "三十、铭牌",
+            "side": "server",
+            "source_doc_title": "执行节点",
+            "local_path": "official/guide/mhw66orrrfkm_执行节点.md",
+            "output_file": "derived/node/执行节点.md",
+            "content": "**归属端**：服务端\n\n![](https://act-webstatic.mihoyo.com/ugc-tutorial/knowledge/cn/zh-cn/mhw66orrrfkm/2b78f9aa-0a0d-436f-8a2e-eef7b103196a.undefined)\n\n**节点功能**\n\n直接设置指定目标的生效铭牌列表，在入参列表中的铭牌配置会生效，不在列表中的会失效\n\n**节点参数**\n\n|     |     |     |     |\n| --- | --- | --- | --- |\n| **参数类型** | **参数名** | **类型** | **说明** |\n| 入参 | 目标实体 | 实体 |  |\n| 入参 | 铭牌配置ID列表 | 配置ID列表 |  |"
+          }
+        ]
+      },
+      {
+        "query": "设置界面文本",
+        "matches": [],
+        "message": "未找到匹配「设置界面文本」的节点"
+      },
+      {
+        "query": "更新文本",
+        "matches": [],
+        "message": "未找到匹配「更新文本」的节点"
+      },
+      {
+        "query": "显示文本",
+        "matches": [],
+        "message": "未找到匹配「显示文本」的节点"
+      },
+      {
+        "query": "设置文本",
+        "matches": [],
+        "message": "未找到匹配「设置文本」的节点"
+      }
+    ]
+  },
+  "error": null
+}

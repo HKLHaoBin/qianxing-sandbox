@@ -1,0 +1,19 @@
+# 私人玩法留在本机
+门限夺宝/
+门线夺宝/
+文档/限时夺宝-时间门/
+memory/local/
+
+# 第三方仓库由 scripts/setup 克隆，不把它们的历史再打包进本仓库
+tools/Miliastra-Node-Editor-Pack/
+文档/Miliastra-knowledge/
+
+# 依赖与临时输出
+**/node_modules/
+**/*.log
+tools/nodeinfo_tmp.json
+
+# 某一局的导出中间件，不是共享习惯
+文档/元件*
+文档/compare_*
+文档/积木星星*
