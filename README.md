@@ -13,12 +13,12 @@
 ## 克隆之后
 
 ```powershell
-git clone --recurse-submodules https://github.com/HKLHaoBin/qianxing-sandbox.git
+git clone https://github.com/HKLHaoBin/qianxing-sandbox.git
 cd qianxing-sandbox
 .\scripts\setup.ps1
 ```
 
-`setup.ps1` 会克隆两份公开的第三方仓库：节点编辑器包，以及千星知识库。它们不打包进本仓库的历史。
+`setup.ps1` 会再克隆两份公开仓库：节点编辑器包，以及千星知识库。它们有自己的历史，不打包进本仓库。知识库和编辑器包克隆完成后，这个目录就可以开始用。
 
 然后用 Cursor 打开这个目录。规则在 `AGENTS.md`，具体步骤在 `.cursor/skills/`。
 
