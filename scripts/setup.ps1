@@ -1,8 +1,6 @@
-# 补齐第三方工具
+﻿# Clone missing third-party tools, then npm install the node editor pack.
+$ErrorActionPreference = "Stop"
 
-本仓库不打包这两份公开仓库的历史。缺目录时再克隆。
-
-```powershell
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 
@@ -17,6 +15,18 @@ if (-not (Test-Path (Join-Path $knowledge ".git"))) {
   git clone https://github.com/1475505/Miliastra-knowledge.git $knowledge
 }
 
-if (Get-Command npm -ErrorAction SilentlyContinue) {
-  npm install --prefix $pack
+if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
+  Write-Warning "npm not found; skipped dependency install for tools\Miliastra-Node-Editor-Pack."
+  exit 0
+}
+
+Push-Location $pack
+try {
+  npm install
+  if ($LASTEXITCODE -ne 0) {
+    throw "npm install failed with exit code $LASTEXITCODE"
+  }
+}
+finally {
+  Pop-Location
 }
