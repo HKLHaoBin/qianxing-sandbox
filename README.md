@@ -24,7 +24,8 @@ cd qianxing-sandbox
 
 ## 仓库里有什么
 
-- `.cursor/skills/`：开新局、按整局回答元件问题、做完后同步 Git 和记忆、节点图五要素、知识库查询
+- `.cursor/skills/`：开新局、按整局回答元件问题、做完后同步 Git 和记忆、节点图五要素、知识库查询、**客户端 Lua / UI（7.1）**
+- `文档/客户端Lua与UI.md`：7.1 起 Lua 与节点图怎么分工（人读）；细则在 `.cursor/skills/miliastra-lua/`
 - `memory/`：可合并的经验。合并方式见 `memory/MERGE.md`
 - `projects/_template/`：一个玩法的文档版式
 - 根目录两份可复用资产：

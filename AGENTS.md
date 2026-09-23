@@ -11,10 +11,11 @@
 3. 节点图做完、用户确认资产文件无误、用户建了某个游戏的资产文件夹并要上传，或确认过的资产已经可以进仓库 → `.cursor/skills/miliastra-sync/SKILL.md`
 4. 指导用户在编辑器里改节点图 → `.cursor/skills/miliastra-node-edit/SKILL.md`
 5. 查节点含义、官方用法、排障 → `.cursor/skills/miliastra-knowledge/SKILL.md`
+6. 用户提到 Lua、客户端脚本、客户端控件、引用控件、控件模板，或玩法主要是屏幕 UI / 2D 交互（扇形手牌、自定义 HUD、界面动画等）→ `.cursor/skills/miliastra-lua/SKILL.md`（此类表现优先 Lua；权威逻辑仍用服务端节点图）
 
 动手前先读 `memory-graph.md` 和 `memory/lessons/`。本机若有 `memory/local/`，一并读取；那个目录不上传。
 
-规划新玩法前：先看仓库里已有的常用资产（根目录两份 `.gia`）和本地资产中心，能直接导入的复合节点或数据结构优先导入。
+规划新玩法前：先看仓库里已有的常用资产（根目录两份 `.gia`）和本地资产中心，能直接导入的复合节点或数据结构优先导入。屏幕 UI / 2D 表现对照 `文档/客户端Lua与UI.md`，能 Lua 的不要先拆成物件节点图。
 
 ## 共享边界
 
