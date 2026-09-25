@@ -18,24 +18,25 @@ cd qianxing-sandbox
 .\scripts\setup.ps1
 ```
 
-`setup.ps1` 会再克隆两份公开仓库：节点编辑器包，以及千星知识库。它们有自己的历史，不打包进本仓库。知识库和编辑器包克隆完成后，这个目录就可以开始用。
+`setup.ps1` 会再克隆两份公开仓库（节点编辑器包、千星知识库），并安装 **千星沙箱模拟器** npm 包（`beyond-simulator-web` / `beyond-simulator-mcp`），创建本机工作区 `beyond-workspace/`。第三方仓库有自己的历史，不打包进本仓库。知识库和编辑器包克隆完成后，这个目录就可以开始用；写 Lua 前把 MCP 配好（见 `tools/beyond-simulator/mcp.json.example`）。
 
 然后用 Cursor 打开这个目录。规则在 `AGENTS.md`，具体步骤在 `.cursor/skills/`。
 
 ## 仓库里有什么
 
-- `.cursor/skills/`：开新局、按整局回答元件问题、做完后同步 Git 和记忆、节点图五要素、知识库查询、**客户端 Lua / UI（7.1）**
+- `.cursor/skills/`：开新局、按整局回答元件问题、做完后同步 Git 和记忆、节点图五要素、知识库查询、**客户端 Lua / UI（7.1）**、**千星沙箱模拟器（Beyond）**
 - `文档/客户端Lua与UI.md`：7.1 起 Lua 与节点图怎么分工（人读）；细则在 `.cursor/skills/miliastra-lua/`
+- `文档/千星沙箱模拟器.md`：Lua 优先用模拟器开发；配置与技能在 `.cursor/skills/miliastra-beyond/`、`tools/beyond-simulator/`
 - `memory/`：可合并的经验。合并方式见 `memory/MERGE.md`
 - `projects/_template/`：一个玩法的文档版式
 - 根目录两份可复用资产：
   - `常用复合节点大全v1.7(补充包同步更新中).gia`
   - `数据结构：队列-二维数组-栈.gia`
-- `tools/`：解析和对照 GIA 的脚本
+- `tools/`：解析和对照 GIA 的脚本；`tools/beyond-simulator/` 为模拟器 MCP 配置示例
 
 ## 不会出现在 GitHub 上的
 
-`门限夺宝`、`门线夺宝` 的资产和设计导出留在作者本机，不在这个仓库里。
+`门限夺宝`、`门线夺宝` 的资产和设计导出留在作者本机，不在这个仓库里。`beyond-workspace/`（模拟器存档）同样只留本机。
 
 ## 一起做一局
 

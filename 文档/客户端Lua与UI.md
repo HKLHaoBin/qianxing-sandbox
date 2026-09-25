@@ -2,18 +2,24 @@
 
 《原神》千星奇域从 **7.1** 起支持用 **客户端脚本（Lua）** 驱动 **客户端控件**，用来做自定义 UI、动画，以及大多数 **2D 玩法**界面。
 
-协作者的 AI 应优先读技能：`.cursor/skills/miliastra-lua/SKILL.md`。本文是人读总览。
+协作者的 AI 应优先读技能：`.cursor/skills/miliastra-lua/SKILL.md`，写代码时再读 `.cursor/skills/miliastra-beyond/SKILL.md`。本文是人读总览。
 
 ## 和节点图怎么分工
 
 | 你在做的事 | 用什么 |
 |------------|--------|
-| 手牌扇形、叠层露出一角、HUD、2D 点选反馈 | **Lua + 客户端控件**（优先） |
+| 手牌扇形、叠层露出一角、HUD、2D 点选反馈 | **Lua + 客户端控件**（优先）；**开发用千星沙箱模拟器** |
 | 发牌/出牌规则、胜负、碰撞、造物、元件实体逻辑 | **服务端节点图** |
 
-一句话：**屏幕上看见的优先 Lua；服务器说了算的走节点图。**
+一句话：**屏幕上看见的优先 Lua；先在模拟器里做完再真机验证；服务器说了算的走节点图。**
+
+模拟器人读说明：`文档/千星沙箱模拟器.md`。
 
 ## 最小操作链
+
+**推荐（日常）：** `.\scripts\setup.ps1` → 配置 MCP 或打开 Web → 在 `beyond-workspace/` 里搭控件与 Lua → 试玩通过 → 导出 GIA → 真机核对。
+
+**官方编辑器概念（导出/真机时对齐）：**
 
 1. 界面布局里放 **客户端控件容器**
 2. 做 **客户端控件模板**（例如一张牌）
@@ -37,7 +43,8 @@
 
 ## 仓库内相关文件
 
-- 技能：`.cursor/skills/miliastra-lua/`
+- 技能：`.cursor/skills/miliastra-lua/`、`.cursor/skills/miliastra-beyond/`
 - 何时用 Lua：`.cursor/skills/miliastra-lua/references/when-to-use-lua.md`
-- 落地步骤：`.cursor/skills/miliastra-lua/references/workflow.md`
-- 触发入口：`AGENTS.md` 第 6 条
+- 模拟器工具：`文档/千星沙箱模拟器.md`、`tools/beyond-simulator/`
+- 落地步骤：`.cursor/skills/miliastra-lua/references/workflow.md`（官方概念）；beyond 技能内 `dev-loop`（日常开发）
+- 触发入口：`AGENTS.md` 第 6、7 条

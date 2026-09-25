@@ -4,7 +4,7 @@ description: >-
   千星奇域 7.1 起的客户端 Lua（客户端脚本）与客户端控件：引用控件、控件模板索引、
   扇形手牌/自定义 HUD/2D 小游戏等 UI 表现。用户提到 Lua、客户端脚本、引用控件、
   控件模板、扇形牌、手牌 UI、自定义界面动画，或玩法明显是屏幕 UI/2D 交互时使用。
-  此类表现优先用 Lua，权威规则仍用服务端节点图。
+  此类表现优先用 Lua；编写与自测优先走 miliastra-beyond 模拟器；权威规则仍用服务端节点图。
 ---
 
 # 客户端 Lua：适合就优先用
@@ -13,11 +13,14 @@ description: >-
 
 **规则：玩法若主要是玩家屏幕上的 UI / 2D 表现，优先用 Lua；局内权威状态、碰撞、胜负、发牌校验走服务端节点图。**
 
+**开发规则：一旦判定走 Lua，优先用千星沙箱模拟器（`miliastra-beyond`）编写、试玩与自测；官方编辑器 / 真机用于导入验证与最终确认。** 判定完归属后立刻读 `.cursor/skills/miliastra-beyond/SKILL.md` 并按其工具链执行，不要默认只在官方编辑器里盲改。
+
 先读 `memory-graph.md`、`memory/lessons/`，以及存在的 `memory/local/`。细则与范例见：
 
 - [references/when-to-use-lua.md](references/when-to-use-lua.md) — 何时优先 Lua、分工表、反例
-- [references/workflow.md](references/workflow.md) — 编辑器落地步骤与官方文档入口
-- 人读总览：`文档/客户端Lua与UI.md`
+- [references/workflow.md](references/workflow.md) — 官方编辑器概念与文档入口（真机链路）
+- `.cursor/skills/miliastra-beyond/` — 模拟器安装、MCP/Web、试玩闭环（**日常开发优先**）
+- 人读总览：`文档/客户端Lua与UI.md`、`文档/千星沙箱模拟器.md`
 
 国内知识库镜像可能尚未收录 7.1 全文；以编辑器内 **Local UI Control API** 与官方综合指南为准，不要编造 API 名。
 
@@ -42,17 +45,13 @@ description: >-
 
 完成：回复里能看到两栏各有什么；属于 UI/2D 表现的项明确写「优先 Lua」，不默认拆成一堆 3D 物件节点图。
 
-### 2. 给最小官方链路
+### 2. 优先在模拟器落地，再对齐官方概念
 
-按 [workflow.md](references/workflow.md) 写出用户要在编辑器里做的最短路径：
+1. 读并执行 `miliastra-beyond`：确认 Web/MCP、在 `beyond-workspace/`（或玩法子目录）打开/创建存档，用模拟器改 UI + Lua 并试玩。
+2. 用 [workflow.md](references/workflow.md) 对齐官方概念名（客户端控件容器、模板、引用控件、脚本挂载），便于之后导出 GIA / 真机。
+3. API 在编辑器文档中搜索：`ReferenceControl`、`ControlPrefabIndex`、`controlId`、`GridScrollerControl`（仅列表场景）；未核实的签名不编造。
 
-1. 界面布局加 **客户端控件容器**
-2. 牌面/控件做成 **客户端控件模板**
-3. 用 **引用控件** 或脚本按模板索引动态创建
-4. **千星沙箱 → 客户端脚本资源管理器** 建脚本并挂到控件
-5. API 在编辑器文档中搜索：`ReferenceControl`、`ControlPrefabIndex`、`controlId`、`GridScrollerControl`（仅列表场景）
-
-完成：步骤可照做；未核实的 API 签名写「以编辑器 API 文档为准」，不编造函数名。
+完成：已指出模拟器入口与存档位置；官方链路概念与导出/真机步骤说得清。
 
 ### 3. 与 brief / project 衔接
 

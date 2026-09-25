@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "qxqy_simulator": {
+      "command": "beyond-simulator-mcp",
+      "args": [
+        "--workspace",
+        "REPLACE_WITH_ABSOLUTE_PATH_TO/beyond-workspace"
+      ]
+    }
+  }
+}

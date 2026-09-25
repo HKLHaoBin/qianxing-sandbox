@@ -11,11 +11,12 @@
 3. 节点图做完、用户确认资产文件无误、用户建了某个游戏的资产文件夹并要上传，或确认过的资产已经可以进仓库 → `.cursor/skills/miliastra-sync/SKILL.md`
 4. 指导用户在编辑器里改节点图 → `.cursor/skills/miliastra-node-edit/SKILL.md`
 5. 查节点含义、官方用法、排障 → `.cursor/skills/miliastra-knowledge/SKILL.md`
-6. 用户提到 Lua、客户端脚本、客户端控件、引用控件、控件模板，或玩法主要是屏幕 UI / 2D 交互（扇形手牌、自定义 HUD、界面动画等）→ `.cursor/skills/miliastra-lua/SKILL.md`（此类表现优先 Lua；权威逻辑仍用服务端节点图）
+6. 用户提到 Lua、客户端脚本、客户端控件、引用控件、控件模板，或玩法主要是屏幕 UI / 2D 交互（扇形手牌、自定义 HUD、界面动画等）→ 先读 `.cursor/skills/miliastra-lua/SKILL.md`，再读 `.cursor/skills/miliastra-beyond/SKILL.md`（此类表现优先 Lua；**开发与自测优先走千星沙箱模拟器**；权威逻辑仍用服务端节点图）
+7. 用户提到模拟器、beyond、试玩存档、Authoring JSON、模拟器 MCP/Web，或已在做 Lua 需要装工具/试玩/截图 → `.cursor/skills/miliastra-beyond/SKILL.md`
 
 动手前先读 `memory-graph.md` 和 `memory/lessons/`。本机若有 `memory/local/`，一并读取；那个目录不上传。
 
-规划新玩法前：先看仓库里已有的常用资产（根目录两份 `.gia`）和本地资产中心，能直接导入的复合节点或数据结构优先导入。屏幕 UI / 2D 表现对照 `文档/客户端Lua与UI.md`，能 Lua 的不要先拆成物件节点图。
+规划新玩法前：先看仓库里已有的常用资产（根目录两份 `.gia`）和本地资产中心，能直接导入的复合节点或数据结构优先导入。屏幕 UI / 2D 表现对照 `文档/客户端Lua与UI.md`，能 Lua 的不要先拆成物件节点图；落地时优先用 `文档/千星沙箱模拟器.md` 所述工具链，再导出真机验证。
 
 ## 共享边界
 
@@ -24,7 +25,7 @@
 - `常用复合节点大全v1.7(补充包同步更新中).gia`
 - `数据结构：队列-二维数组-栈.gia`
 
-`门限夺宝/`、`门线夺宝/`、`文档/限时夺宝-时间门/`、`memory/local/` 保持在本机，不要 `git add`。
+`门限夺宝/`、`门线夺宝/`、`文档/限时夺宝-时间门/`、`memory/local/`、`beyond-workspace/`、`tools/miliastra-beyond-simulator/` 保持在本机，不要 `git add`。
 
 ## 节点图编辑输出格式（强制）
 
