@@ -15,7 +15,7 @@ description: >-
 - `常用复合节点大全v1.7(补充包同步更新中).gia`
 - `数据结构：队列-二维数组-栈.gia`
 
-玩法里若有屏幕 UI / 2D 表现（手牌扇形、自定义 HUD、界面动画、点选叠层等），先读 `.cursor/skills/miliastra-lua/SKILL.md` 与 `.cursor/skills/miliastra-beyond/SKILL.md`：**这类表现优先用客户端 Lua，开发与自测优先走千星沙箱模拟器**，权威规则仍用服务端节点图。原件清单里把「客户端控件/脚本」与物件元件分开列，并建议 beyond 存档路径（如 `beyond-workspace/<slug>/`）；不要把扇形手牌默认拆成一排 3D 物件节点图。
+玩法里若有屏幕 UI / 2D 表现（手牌扇形、自定义 HUD、界面动画、点选叠层等），先读 `.cursor/skills/miliastra-lua/SKILL.md` 与 `.cursor/skills/miliastra-beyond/SKILL.md`：**这类表现优先用客户端 Lua，开发与自测优先走千星沙箱模拟器**，权威规则仍用服务端节点图。原件清单里把「客户端控件/脚本」与物件元件分开列，并建议 beyond 存档路径（如 `beyond-workspace/<slug>/`）；复杂 HUD/按钮/网格可注需求档案模板号（见 `miliastra-lua/references/authoring-pack.md`）。不要把扇形手牌默认拆成一排 3D 物件节点图。
 
 ## 步骤
 

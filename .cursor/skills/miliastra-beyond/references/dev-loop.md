@@ -57,8 +57,12 @@ serverSet / serverGet / serverSend
 
 实体类型可用 `Level` / `PlayerSelf` / `AvatarSelf` 或座位 `Player1`–`Player8`。更复杂规则可在 Web「服务端逻辑」页或 `patch` 的 `setServerLogic` 配置——这是**模拟器存档格式**，不是官方节点图导出。
 
+## 写码时查哪里
+
+模拟器负责跑与看；**签名、编号防混淆、生命周期、模板选型** 回 `miliastra-lua` → [authoring-pack.md](../../miliastra-lua/references/authoring-pack.md)（需求档案 v3.1）。常见：`templates/README.md` 选一个练习；网格/按钮先读档案 `docs/11`、`docs/08`、`docs/10`。
+
 ## 对用户说话时
 
 - 直接驱动 MCP 完成可自动的步骤；需要点顶栏「导入/导出/试玩 ↗」时，给短指令
 - 玩法规则断言要写清预期（例如「每次点击 +1 分」）
-- 模拟器通过后，提醒导出并真机验证
+- 模拟器通过后，提醒导出并真机验证；报告里写「模拟器观察」，不写「真机通过」

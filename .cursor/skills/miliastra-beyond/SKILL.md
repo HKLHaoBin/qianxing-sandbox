@@ -21,6 +21,7 @@ description: >-
 - [references/dev-loop.md](references/dev-loop.md) — MCP 工具与开发闭环
 - [references/boundaries.md](references/boundaries.md) — 能力边界与导出约定
 - 人读总览：`文档/千星沙箱模拟器.md`
+- 写码细则与 API/模板：`.cursor/skills/miliastra-lua/references/authoring-pack.md` → 仓库根目录需求档案 v3.1
 
 ## 什么时候用
 
@@ -66,7 +67,7 @@ description: >-
 3. 布局用 `qxqy_studio_ui_screenshot`；运行时画面用 `qxqy_studio_play_screenshot`（需先 `start`）
 4. 多画布用 `canvasId`（如 `mobile-16-9`）；需要时再开多人 `playerCount`
 
-API 名以编辑器 / 工作区文档为准，不编造。模拟器装包不含完整官方知识库；需要节点或官方控件说明时另走 `miliastra-knowledge` / 编辑器内 API。
+API 名以需求档案 `docs/客户端控件API文档.md` 与编辑器为准，不编造；模板与按钮/网格边界走 `miliastra-lua` 的 authoring-pack。模拟器装包不含完整官方知识库；需要节点或系统文档时另走 `miliastra-knowledge`。交付时标明「模拟器观察」，不要写成真机通过（档案 `docs/07`）。
 
 完成：用例或人工试玩在模拟器内达到预期；问题有日志或截图依据。
 

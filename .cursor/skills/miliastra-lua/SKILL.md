@@ -19,10 +19,12 @@ description: >-
 
 - [references/when-to-use-lua.md](references/when-to-use-lua.md) — 何时优先 Lua、分工表、反例
 - [references/workflow.md](references/workflow.md) — 官方编辑器概念与文档入口（真机链路）
+- [references/authoring-pack.md](references/authoring-pack.md) — 本仓库 **客户端脚本需求档案 v3.1** 入口与按需索引
+- [references/lua-coding-rules.md](references/lua-coding-rules.md) — 写码硬规则摘要（编号/按钮/Tween/生命周期）
 - `.cursor/skills/miliastra-beyond/` — 模拟器安装、MCP/Web、试玩闭环（**日常开发优先**）
 - 人读总览：`文档/客户端Lua与UI.md`、`文档/千星沙箱模拟器.md`
 
-国内知识库镜像可能尚未收录 7.1 全文；以编辑器内 **Local UI Control API** 与官方综合指南为准，不要编造 API 名。
+**API 权威顺序：** 本机档案 `docs/客户端控件API文档.md`（经索引定位后读正文）→ 编辑器内 Local UI Control API → 官方在线页。不要编造 API 名；档案快照与编辑器冲突时以编辑器为准并记 lesson。国内知识库镜像可能尚未收录 7.1 全文。
 
 ## 什么时候用
 
@@ -45,13 +47,14 @@ description: >-
 
 完成：回复里能看到两栏各有什么；属于 UI/2D 表现的项明确写「优先 Lua」，不默认拆成一堆 3D 物件节点图。
 
-### 2. 优先在模拟器落地，再对齐官方概念
+### 2. 优先在模拟器落地，并按档案写码
 
 1. 读并执行 `miliastra-beyond`：确认 Web/MCP、在 `beyond-workspace/`（或玩法子目录）打开/创建存档，用模拟器改 UI + Lua 并试玩。
-2. 用 [workflow.md](references/workflow.md) 对齐官方概念名（客户端控件容器、模板、引用控件、脚本挂载），便于之后导出 GIA / 真机。
-3. API 在编辑器文档中搜索：`ReferenceControl`、`ControlPrefabIndex`、`controlId`、`GridScrollerControl`（仅列表场景）；未核实的签名不编造。
+2. 写或改脚本前：读 [authoring-pack.md](references/authoring-pack.md) → 档案 `AGENT.md`，再只加载当前任务分册；硬规则对照 [lua-coding-rules.md](references/lua-coding-rules.md)。需要练习骨架时从 `templates/README.md` 选 **一个** 相关文件，不要一次拼接多个模板。
+3. 用 [workflow.md](references/workflow.md) 对齐官方概念名（客户端控件容器、模板、引用控件、脚本挂载），便于之后导出 GIA / 真机。
+4. API：先经档案 `docs/本地API索引.md` 定位，再读 `docs/客户端控件API文档.md` 完整定义；必要时回编辑器核对。检索词示例：`ReferenceControl`、`ControlPrefabIndex`、`controlId`、`GridScrollerControl`（仅列表场景）。
 
-完成：已指出模拟器入口与存档位置；官方链路概念与导出/真机步骤说得清。
+完成：已指出模拟器入口与存档位置；所用 API/模板有档案或编辑器依据；官方链路概念与导出/真机步骤说得清。
 
 ### 3. 与 brief / project 衔接
 
@@ -67,8 +70,10 @@ description: >-
 ### 4. 边界与失败处理
 
 - 无客户端控件容器 → 客户端控件与脚本不生效
-- GridScroller 用于背包式列表，不用于自定义角度扇形叠牌
+- GridScroller / 网格视窗用于背包式列表，不用于自定义角度扇形叠牌；列表项走 `RefreshItems`，勿与 `InstantiateClientUIControl` 混用
 - 脚本只能访问 **客户端控件** 的模板索引；服务端控件模板索引不可用
-- 知识库查不到 7.1 内容时，改引官方指南链接与编辑器内 API，并说明镜像可能未同步
+- 组合式按钮与预设按钮按结构区分（见档案 `docs/08`、`docs/10`）；空预设按钮不能用「点得动」证明已显示
+- 交付时区分静态检查、模拟器观察、真机观察（档案 `docs/07`）；模拟通过 ≠ 真机通过
+- 知识库查不到 7.1 内容时，改引本仓库档案、官方指南链接与编辑器内 API，并说明镜像可能未同步
 
-完成：用户知道什么能靠 Lua 闭环、什么必须回节点图。
+完成：用户知道什么能靠 Lua 闭环、什么必须回节点图；写码边界有档案依据。

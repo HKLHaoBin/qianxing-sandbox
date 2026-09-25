@@ -45,6 +45,15 @@
 
 - 技能：`.cursor/skills/miliastra-lua/`、`.cursor/skills/miliastra-beyond/`
 - 何时用 Lua：`.cursor/skills/miliastra-lua/references/when-to-use-lua.md`
+- **写码细则 / API 快照 / 教学模板：** `千星奇域Lua开发环境-客户端脚本需求档案-v3.1/`（入口 `AGENT.md`；技能索引见 `miliastra-lua/references/authoring-pack.md`）
+- 硬规则摘要：`.cursor/skills/miliastra-lua/references/lua-coding-rules.md`
 - 模拟器工具：`文档/千星沙箱模拟器.md`、`tools/beyond-simulator/`
 - 落地步骤：`.cursor/skills/miliastra-lua/references/workflow.md`（官方概念）；beyond 技能内 `dev-loop`（日常开发）
 - 触发入口：`AGENTS.md` 第 6、7 条
+
+## 需求档案怎么用（人读）
+
+1. AI / 协作者写 Lua 时从 `AGENT.md` 进，按任务只读相关 `docs/`、`prompts/`、`templates/`。
+2. 不要默认打开 `guides/`（图册给人看）；API 以包内 `docs/客户端控件API文档.md` 为准，再和编辑器核对。
+3. 一次只挑一个模板练（见 `templates/README.md`）；v3.1 特别注意：组合式按钮 vs 预设按钮、空预设按钮不能用点击证明已显示。
+4. 日常开发仍优先模拟器；档案不替代 Beyond，也不替代服务端节点图。

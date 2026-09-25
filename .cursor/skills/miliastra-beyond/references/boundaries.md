@@ -25,10 +25,11 @@
 | 事项 | 技能 |
 |------|------|
 | 是否该用 Lua | `miliastra-lua` |
+| API / 模板 / 写码硬规则 | `miliastra-lua` → 需求档案 v3.1（authoring-pack） |
 | 在模拟器里做与测 | **本技能 `miliastra-beyond`** |
 | 改服务端节点图五要素 | `miliastra-node-edit` |
 | 查官方节点/系统文档 | `miliastra-knowledge` |
-| 整局原件清单 | `miliastra-brief`（UI 项标「优先 Lua + beyond」） |
+| 整局原件清单 | `miliastra-brief`（UI 项标「优先 Lua + beyond」；复杂 HUD 可注档案模板号） |
 
 ## 许可
 

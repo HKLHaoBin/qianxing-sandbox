@@ -2,7 +2,9 @@
 
 **日常编写与自测优先走模拟器**（`.cursor/skills/miliastra-beyond/`），本节描述官方编辑器概念与真机链路，供导出后核对。
 
-依据 7.1 官方综合指南（英文页已公开）与奇匠指南口径整理。中文知识库镜像可能滞后；**编辑器内 API 文档优先**。
+依据 7.1 官方综合指南（英文页已公开）与奇匠指南口径整理。中文知识库镜像可能滞后。
+
+**本仓库写码优先读** [authoring-pack.md](authoring-pack.md) 指向的需求档案（含 API 离线快照与模板）；与编辑器内文档冲突时以编辑器为准。
 
 ## 官方文档入口
 
@@ -16,13 +18,14 @@
 
 国服同路径可试：`https://act.mihoyo.com/ys/ugc/tutorial/detail/<同一 id>`。
 
-API 检索词（在编辑器 Local UI Control API 中搜索，勿凭记忆编签名）：
+API 检索：先查档案 `docs/本地API索引.md` → `docs/客户端控件API文档.md`；必要时再在编辑器 Local UI Control API 中搜索（勿凭记忆编签名）：
 
 - `ReferenceControl`
 - `ControlPrefabIndex`
 - `controlId`
 - `GridScrollerControl`
 - `ClientUIBaseControl`
+- `ClientUIPresetButtonControl`
 
 ## 最短搭建顺序
 
@@ -45,7 +48,7 @@ API 检索词（在编辑器 Local UI Control API 中搜索，勿凭记忆编签
 
 - 客户端脚本 **不替代** 实体节点图五要素流程（`miliastra-node-edit`）。
 - 指导用户改 **服务端** 节点图时，仍输出元件 / 节点卡 / 搜索 ID / 字段 / 参数。
-- 指导用户改 Lua 时，写清：脚本挂在哪个控件、用哪个模板索引、表现目标；API 未导出核实的不写死函数名。
+- 指导用户改 Lua 时，写清：脚本挂在哪个控件、用哪个模板索引、表现目标；并按档案证据分层区分静态/模拟/真机。API 未核实的不写死函数名。
 
 ## 版本备忘
 

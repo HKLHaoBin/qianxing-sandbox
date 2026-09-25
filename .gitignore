@@ -8,6 +8,9 @@ memory/local/
 beyond-workspace/
 tools/miliastra-beyond-simulator/
 
+# 需求档案以展开目录入库；同名 zip 仅本机备份
+千星奇域Lua开发环境-客户端脚本需求档案-*.zip
+
 # 第三方仓库由 scripts/setup 克隆，不把它们的历史再打包进本仓库
 tools/Miliastra-Node-Editor-Pack/
 文档/Miliastra-knowledge/

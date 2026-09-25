@@ -15,8 +15,9 @@
 - miliastra-sync (Skill)：确认资产后 pull / merge / push，再写 lesson 并第二次 push。
 - miliastra-node-edit (Skill)：改节点图时的五要素和空号优先 ID。
 - miliastra-knowledge (Skill)：节点与官方文档查询。
-- miliastra-lua (Skill)：7.1 客户端 Lua / 客户端控件；UI·2D 表现优先 Lua。
+- miliastra-lua (Skill)：7.1 客户端 Lua / 客户端控件；UI·2D 表现优先 Lua；写码细则指向需求档案。
 - miliastra-beyond (Skill)：外置模拟器 Web/MCP；Lua 日常开发与试玩优先。
+- 客户端脚本需求档案 v3.1 (文档包)：`千星奇域Lua开发环境-客户端脚本需求档案-v3.1/`（AGENT、API 快照、templates）。
 - 客户端Lua与UI (文档)：`文档/客户端Lua与UI.md`。
 - 千星沙箱模拟器 (文档)：`文档/千星沙箱模拟器.md`。
 - beyond-simulator (工具)：`tools/beyond-simulator/` 配置示例；npm `beyond-simulator-web` / `beyond-simulator-mcp`。
@@ -35,9 +36,11 @@
 - miliastra-sync -appends-> memory/lessons
 - miliastra-node-edit -governs-> 节点图改动说明
 - miliastra-lua -documents-> 客户端Lua与UI
+- miliastra-lua -indexes-> 客户端脚本需求档案 v3.1
 - miliastra-lua -defers-dev-to-> miliastra-beyond
 - miliastra-beyond -documents-> 千星沙箱模拟器
 - miliastra-beyond -uses-> beyond-simulator
+- miliastra-beyond -defers-api-to-> 客户端脚本需求档案 v3.1
 
 ## Facts
 
@@ -47,6 +50,7 @@
 - 第三方知识库和节点编辑器包用 `scripts/setup.ps1` 克隆；模拟器用同一脚本 `npm install -g`，不嵌进本仓库历史。
 - 7.1 客户端脚本驱动客户端控件；引用控件对应模板引用；无客户端控件容器则脚本不生效。
 - 上游模拟器：https://github.com/1475505/miliastra-beyond-simulator （GPL-3.0-only）。
+- 客户端 Lua 写码：本仓库需求档案 v3.1（`AGENT.md`）+ Beyond 试玩；API 冲突以编辑器为准。
 
 ## Decisions
 
@@ -55,9 +59,11 @@
 - 节点图做完的同步顺序：展示文件 → 用户确认 → 拉取合并推送 → 写记忆 → 再拉取合并推送。
 - 屏幕 UI / 2D 表现优先 Lua；权威逻辑仍用服务端节点图（见 miliastra-lua）。
 - Lua 开发优先 Beyond 模拟器；真机与官方编辑器做最终验证（见 miliastra-beyond）。
+- Lua 实现细则以需求档案为准；lua/beyond 只做归属与工具路由，不替代档案正文。
 
 ## Lessons
 
 - 2026-09-22 编辑器手法（计时器控件、节点真名、ID 空号、两元件不要共用获取实体）：`memory/lessons/2026-09-22-node-edit-basics.md`
 - 2026-09-24 客户端 Lua 能力入库与「UI 优先 Lua」约定：`memory/lessons/2026-09-24-client-lua-skill.md`
 - 2026-09-25 Beyond 模拟器接入与「Lua 优先模拟器开发」：`memory/lessons/2026-09-25-beyond-simulator-skill.md`
+- 2026-09-25 需求档案 v3.1 入库与 lua/beyond 接线：`memory/lessons/2026-09-25-lua-authoring-pack-v31.md`
