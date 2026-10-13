@@ -18,15 +18,16 @@ cd qianxing-sandbox
 .\scripts\setup.ps1
 ```
 
-`setup.ps1` 会再克隆两份公开仓库（节点编辑器包、千星知识库），并安装 **千星沙箱模拟器** npm 包（`beyond-simulator-web` / `beyond-simulator-mcp`），创建本机工作区 `beyond-workspace/`。第三方仓库有自己的历史，不打包进本仓库。知识库和编辑器包克隆完成后，这个目录就可以开始用；写 Lua 前把 MCP 配好（见 `tools/beyond-simulator/mcp.json.example`）。
+`setup.ps1` 会再克隆三份公开仓库（节点编辑器包、官方知识库、**格式层文档** [qianxing-format-docs](https://github.com/hang-ZYM/qianxing-format-docs)），并安装 **千星沙箱模拟器** npm 包（`beyond-simulator-web` / `beyond-simulator-mcp`），创建本机工作区 `beyond-workspace/`。第三方仓库有自己的历史，不打包进本仓库。克隆完成后，这个目录就可以开始用；写 Lua 前把 MCP 配好（见 `tools/beyond-simulator/mcp.json.example`）。
 
 然后用 Cursor 打开这个目录。规则在 `AGENTS.md`，具体步骤在 `.cursor/skills/`。
 
 ## 仓库里有什么
 
-- `.cursor/skills/`：开新局、按整局回答元件问题、做完后同步 Git 和记忆、节点图五要素、知识库查询、**客户端 Lua / UI（7.1）**、**千星沙箱模拟器（Beyond）**
+- `.cursor/skills/`：开新局、按整局回答元件问题、做完后同步 Git 和记忆、节点图五要素、官方知识库查询、**格式层（qianxing-format-docs）**、**客户端 Lua / UI（7.1）**、**千星沙箱模拟器（Beyond）**
 - `文档/客户端Lua与UI.md`：7.1 起 Lua 与节点图怎么分工（人读）；细则在 `.cursor/skills/miliastra-lua/`
 - `文档/千星沙箱模拟器.md`：Lua 优先用模拟器开发；配置与技能在 `.cursor/skills/miliastra-beyond/`、`tools/beyond-simulator/`
+- `文档/千星格式知识库.md`：第三份知识源（格式/行为）；本地克隆 `文档/qianxing-format-docs/`，技能 `.cursor/skills/miliastra-format/`
 - `千星奇域Lua开发环境-客户端脚本需求档案-v3.1/`：客户端 Lua 创作包（API 快照、prompts、templates；入口 `AGENT.md`）
 - `memory/`：可合并的经验。合并方式见 `memory/MERGE.md`
 - `projects/_template/`：一个玩法的文档版式

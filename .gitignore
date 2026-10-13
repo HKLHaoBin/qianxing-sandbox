@@ -14,6 +14,7 @@ tools/miliastra-beyond-simulator/
 # 第三方仓库由 scripts/setup 克隆，不把它们的历史再打包进本仓库
 tools/Miliastra-Node-Editor-Pack/
 文档/Miliastra-knowledge/
+文档/qianxing-format-docs/
 
 # 依赖与临时输出
 **/node_modules/

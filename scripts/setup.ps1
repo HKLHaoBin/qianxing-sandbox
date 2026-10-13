@@ -7,6 +7,7 @@ Set-Location $root
 
 $pack = Join-Path $root "tools\Miliastra-Node-Editor-Pack"
 $knowledge = Join-Path $root "文档\Miliastra-knowledge"
+$formatDocs = Join-Path $root "文档\qianxing-format-docs"
 $beyondWorkspace = Join-Path $root "beyond-workspace"
 
 if (-not (Test-Path (Join-Path $pack ".git"))) {
@@ -15,6 +16,10 @@ if (-not (Test-Path (Join-Path $pack ".git"))) {
 
 if (-not (Test-Path (Join-Path $knowledge ".git"))) {
   git clone https://github.com/1475505/Miliastra-knowledge.git $knowledge
+}
+
+if (-not (Test-Path (Join-Path $formatDocs ".git"))) {
+  git clone https://github.com/hang-ZYM/qianxing-format-docs.git $formatDocs
 }
 
 if (-not (Test-Path $beyondWorkspace)) {

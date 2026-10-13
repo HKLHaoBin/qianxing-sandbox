@@ -18,7 +18,7 @@
 
 setup 会：
 
-1. 照旧克隆节点编辑器包与知识库（若尚未存在）
+1. 照旧克隆节点编辑器包、官方知识库与格式层文档（若尚未存在）
 2. `npm install -g beyond-simulator-web beyond-simulator-mcp`
 3. 创建本机工作区目录 `beyond-workspace/`（已在 `.gitignore`，不入库）
 

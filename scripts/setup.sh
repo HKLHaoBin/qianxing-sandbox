@@ -5,6 +5,7 @@ cd "$root"
 
 pack="$root/tools/Miliastra-Node-Editor-Pack"
 knowledge="$root/文档/Miliastra-knowledge"
+format_docs="$root/文档/qianxing-format-docs"
 beyond_workspace="$root/beyond-workspace"
 
 if [[ ! -d "$pack/.git" ]]; then
@@ -13,6 +14,10 @@ fi
 
 if [[ ! -d "$knowledge/.git" ]]; then
   git clone https://github.com/1475505/Miliastra-knowledge.git "$knowledge"
+fi
+
+if [[ ! -d "$format_docs/.git" ]]; then
+  git clone https://github.com/hang-ZYM/qianxing-format-docs.git "$format_docs"
 fi
 
 if [[ ! -d "$beyond_workspace" ]]; then

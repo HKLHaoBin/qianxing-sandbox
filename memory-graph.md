@@ -2,7 +2,7 @@
 
 - slug: 千星沙箱
 - path: F:\编程\千星沙箱
-- updated: 2026-09-25
+- updated: 2026-10-13
 
 ## Summary
 
@@ -15,11 +15,14 @@
 - miliastra-sync (Skill)：确认资产后 pull / merge / push，再写 lesson 并第二次 push。
 - miliastra-node-edit (Skill)：改节点图时的五要素和空号优先 ID。
 - miliastra-knowledge (Skill)：节点与官方文档查询。
+- miliastra-format (Skill)：格式层（容器/行为/离线合成）；本地库 `文档/qianxing-format-docs/`。
 - miliastra-lua (Skill)：7.1 客户端 Lua / 客户端控件；UI·2D 表现优先 Lua；写码细则指向需求档案。
 - miliastra-beyond (Skill)：外置模拟器 Web/MCP；Lua 日常开发与试玩优先。
 - 客户端脚本需求档案 v3.1 (文档包)：`千星奇域Lua开发环境-客户端脚本需求档案-v3.1/`（AGENT、API 快照、templates）。
 - 客户端Lua与UI (文档)：`文档/客户端Lua与UI.md`。
 - 千星沙箱模拟器 (文档)：`文档/千星沙箱模拟器.md`。
+- 千星格式知识库 (文档)：`文档/千星格式知识库.md`。
+- qianxing-format-docs (第三方)：`文档/qianxing-format-docs/`（setup 克隆）。
 - beyond-simulator (工具)：`tools/beyond-simulator/` 配置示例；npm `beyond-simulator-web` / `beyond-simulator-mcp`。
 - 常用复合节点大全 (资产)：根目录 `常用复合节点大全v1.7(补充包同步更新中).gia`。
 - 数据结构：队列-二维数组-栈 (资产)：根目录 `数据结构：队列-二维数组-栈.gia`。
@@ -41,13 +44,17 @@
 - miliastra-beyond -documents-> 千星沙箱模拟器
 - miliastra-beyond -uses-> beyond-simulator
 - miliastra-beyond -defers-api-to-> 客户端脚本需求档案 v3.1
+- miliastra-format -documents-> 千星格式知识库
+- miliastra-format -reads-> qianxing-format-docs
+- miliastra-format -defers-gameplay-to-> miliastra-knowledge
 
 ## Facts
 
 - 协作者要某元件的做法时，对 AI 说：我需要元件「…」的节点图信息。
 - 搜索 ID 以该节点图文档或导出为准。两处都没有则标「文档未记录」。
 - `memory/local/`、`门限夺宝/`、`门线夺宝/`、`文档/限时夺宝-时间门/`、`beyond-workspace/`、`tools/miliastra-beyond-simulator/` 不上传。
-- 第三方知识库和节点编辑器包用 `scripts/setup.ps1` 克隆；模拟器用同一脚本 `npm install -g`，不嵌进本仓库历史。
+- 第三方官方知识库、格式层文档、节点编辑器包用 `scripts/setup.ps1` 克隆；模拟器用同一脚本 `npm install -g`，不嵌进本仓库历史。
+- 格式层上游：https://github.com/hang-ZYM/qianxing-format-docs （与官方知识库互补，不替代）。
 - 7.1 客户端脚本驱动客户端控件；引用控件对应模板引用；无客户端控件容器则脚本不生效。
 - 上游模拟器：https://github.com/1475505/miliastra-beyond-simulator （GPL-3.0-only）。
 - 客户端 Lua 写码：本仓库需求档案 v3.1（`AGENT.md`）+ Beyond 试玩；API 冲突以编辑器为准。

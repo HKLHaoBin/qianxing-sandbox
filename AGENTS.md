@@ -13,6 +13,7 @@
 5. 查节点含义、官方用法、排障 → `.cursor/skills/miliastra-knowledge/SKILL.md`
 6. 用户提到 Lua、客户端脚本、客户端控件、引用控件、控件模板，或玩法主要是屏幕 UI / 2D 交互（扇形手牌、自定义 HUD、界面动画等）→ 先读 `.cursor/skills/miliastra-lua/SKILL.md`，再读 `.cursor/skills/miliastra-beyond/SKILL.md`（此类表现优先 Lua；**开发与自测优先走千星沙箱模拟器**；权威逻辑仍用服务端节点图）。写或修脚本、查 API/模板时，按 `miliastra-lua/references/authoring-pack.md` 打开仓库内 **客户端脚本需求档案 v3.1**（入口 `千星奇域Lua开发环境-客户端脚本需求档案-v3.1/AGENT.md`），只加载当前任务分册
 7. 用户提到模拟器、beyond、试玩存档、Authoring JSON、模拟器 MCP/Web，或已在做 Lua 需要装工具/试玩/截图 → `.cursor/skills/miliastra-beyond/SKILL.md`
+8. 用户问 `.gil` / `.gis` / `.gia` 容器与字段、文件格式、离线合成/校验、节点连线兼容、实体尺寸/BOM、编辑器行为定律、运行语义、或「按格式文档 / 不开编辑器构图」→ `.cursor/skills/miliastra-format/SKILL.md`（本地库在 `文档/qianxing-format-docs/`；人读总览 `文档/千星格式知识库.md`）。官方玩法与节点用法仍走第 5 条，不要用格式层替代
 
 动手前先读 `memory-graph.md` 和 `memory/lessons/`。本机若有 `memory/local/`，一并读取；那个目录不上传。
 
@@ -25,7 +26,7 @@
 - `常用复合节点大全v1.7(补充包同步更新中).gia`
 - `数据结构：队列-二维数组-栈.gia`
 
-`门限夺宝/`、`门线夺宝/`、`文档/限时夺宝-时间门/`、`memory/local/`、`beyond-workspace/`、`tools/miliastra-beyond-simulator/` 保持在本机，不要 `git add`。
+`门限夺宝/`、`门线夺宝/`、`文档/限时夺宝-时间门/`、`memory/local/`、`beyond-workspace/`、`tools/miliastra-beyond-simulator/`、以及 setup 克隆的 `tools/Miliastra-Node-Editor-Pack/`、`文档/Miliastra-knowledge/`、`文档/qianxing-format-docs/` 保持在本机（或不把第三方历史打进本仓），不要 `git add`。
 
 ## 节点图编辑输出格式（强制）
 
